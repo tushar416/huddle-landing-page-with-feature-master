@@ -266,4 +266,7 @@ footer {
   main {
     margin-bottom: 1rem;
   }
+   header {
+    background-image: url("images/bg-hero-mobile.svg");
+  }
 }
