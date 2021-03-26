@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --VeryPaleCyan: hsl(193, 100%, 96%);
+  --VeryDarkCyan: hsl(192, 100%, 9%);
+  --GrayishBlue: hsl(208, 11%, 55%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* header */
+header {
+  background-image: url("images/bg-hero-desktop.svg");
+  padding-top: 3rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 5rem;
+}
+header .two-divs .btn-div {
+  margin-top: 2rem;
+}
+.btn {
+  padding: 1rem 4rem;
+  background: var(--Pink);
+  font-family: "Poppins", sans-serif;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.white-btn {
+  background: #fff;
+  cursor: pointer;
+  color: var(--VeryDarkCyan);
+  box-shadow: 5px 0px 13px 1px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.two-divs {
+  display: flex;
+  padding: 4rem;
+  justify-content: space-between;
+}
+.content-div {
+  width: 45%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.img-div {
+  width: 45%;
+}
+.two-divs img {
+  height: 100%;
+  width: 100%;
+}
+/* main */
+main {
+  margin: 10rem auto;
+  width: 90%;
+}
+main .two-divs {
+  margin-bottom: 3rem;
+  border-radius: 5px;
+  box-shadow: 5px 0px 13px 1px rgba(0, 0, 0, 0.25);
+}
+main p {
+  color: var(--GrayishBlue);
+}
+.get-started {
+  margin: auto;
+  position: relative;
+  bottom: -6rem;
+  background: #fff;
+  padding: 3rem;
+  padding-bottom: 5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 0px 13px 1px rgba(0, 0, 0, 0.25);
+}
+.get-started h2 {
+  margin-bottom: 2rem;
+}
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--VeryDarkCyan);
+  color: #fff;
+  padding: 10rem 5rem 1rem;
+}
+.footer-content {
+  display: flex;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.info {
+  width: 400px;
+
+  margin-bottom: 1.8rem;
+}
+.info .icon {
+  float: left;
+}
+.info p {
+  margin-left: 2rem;
+}
+.footer-nav {
+  display: grid;
+  width: 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px;
+}
+.footer-nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+.link {
+  margin-left: 1rem;
+  border: 1px #fff solid;
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+}
+.link:hover {
+  color: var(--Pink);
+  border: 1px var(--Pink) solid;
+}
+.copyright {
+  margin-left: auto;
+  font-size: 12px;
+}
+.attribution {
+  text-align: center;
+  margin-top: 3rem;
+}
+/* media query */
+@media (max-width: 1110px) {
+  .get-started {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  header .two-divs {
+    flex-direction: column;
+  }
+  header .img-div {
+    width: 90%;
+    margin: auto;
+  }
+  header .content-div {
+    width: fit-content;
+    margin-bottom: 5rem;
+    text-align: center;
+    align-items: center;
+  }
+  .get-started {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+  .logo {
+    width: 180px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .white-btn {
+    padding: 0.6rem 1.8rem;
+  }
+  .head {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 717px) {
+  .footer-nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 50px);
+  }
+  .social-links {
+    margin: 5rem auto 0;
+  }
+
+  header .two-divs p {
+    margin: 1.5rem auto;
+  }
+  .copyright {
+    margin: auto;
+  }
+  .footer-nav {
+    margin-top: 2rem;
+  }
+  .two-divs {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  main .two-divs:first-child,
+  main .two-divs:last-child {
+    flex-direction: column-reverse;
+  }
+  .img-div {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+  .content-div {
+    width: fit-content;
+
+    text-align: center;
+    margin: 1.5rem auto;
+  }
+  .attribution {
+    font-size: 14px;
+  }
+  .info,
+  .footer-nav {
+    max-width: 300px;
+  }
+  footer {
+    padding: 10rem 1rem 1rem;
+  }
+}
+@media (max-width: 566px) {
+  .get-started {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .get-started h2 {
+    font-size: 1rem;
+  }
+  .get-started .btn {
+    padding: 1rem 2rem;
+  }
+  .logo {
+    width: 120px;
+  }
+  .white-btn {
+    padding: 0.4rem 1.3rem;
+  }
+  .head {
+    margin: 0.8rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  main {
+    margin-bottom: 1rem;
+  }
+}
